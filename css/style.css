@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/*Обнуляем стили, подготавливаем к работе****/
+/* Указываем box sizing */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/******************основные стили***********************/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #646161;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+::selection {
+  color: #fff;
+  background: #ffecbb;
+}
+.wrapper {
+  width: 400px;
+  height: 266px;
+  background: #1f1f1f;
+  padding: 50px 45px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+header h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+header p {
+  margin-top: 5px;
+  font-size: 16px;
+}
+.price-input {
+  width: 100%;
+  display: flex;
+  margin: 30px 0 35px;
+}
+.price-input .field {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+  position: relative;
+}
+.field {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.field input {
+  width: 45%;
+  height: 60%;
+  outline: none;
+  /* margin-left: 12px; */
+  border-radius: 5px;
+  text-align: center;
+  background-color: #6a6a6a;
+  color: #fff;
+  border: 1px solid gray;
+  -moz-appearance: textfield;
+  text-align: left;
+  padding: 0 0 0 0.8rem;
+}
+
+.field span {
+  position: absolute;
+  right: 50px;
+  color: #fff;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.slider_block {
+  padding: 0 35px 0 35px;
+}
+
+.slider {
+  height: 12px;
+  position: relative;
+  background: #ffecbb;
+  border-radius: 5px;
+}
+.slider .progress {
+  height: 100%;
+  left: 7%;
+  right: 37%;
+  position: absolute;
+  border-radius: 5px;
+  background: #fdc840;
+}
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  top: -12px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #fff;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+input[type="range"]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}

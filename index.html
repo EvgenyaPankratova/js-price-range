@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>price</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div>
+        <div class="price-input">
+          <div class="field">
+            <input type="number" class="input-min" value="100" />
+            <span>₽</span>
+          </div>
+
+          <div class="field">
+            <input type="number" class="input-max" value="900" />
+            <span>₽</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider_block">
+        <div class="slider">
+          <div class="progress"></div>
+        </div>
+        <div class="range-input">
+          <input
+            type="range"
+            class="range-min"
+            min="0"
+            max="1500"
+            value="100"
+            step="100"
+          />
+          <input
+            type="range"
+            class="range-max"
+            min="0"
+            max="1500"
+            value="900"
+            step="100"
+          />
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
